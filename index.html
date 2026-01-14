@@ -48,17 +48,58 @@
         .speaking-intro { background: linear-gradient(135deg, #002FA7 0%, #0047BB 100%); color: white; padding: 3rem; border-radius: 12px; margin-bottom: 3rem; }
         .lead-text { font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem; }
         .writing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .article-card { background: #f8f9fa; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #002FA7; }
+        .article-card { background: #f8f9fa; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #002FA7; transition: all 0.3s; }
+        .article-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
         .article-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
         .publication { font-weight: 600; color: #002FA7; margin-bottom: 1rem; }
         .connect-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
         .connect-link { display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: #1a1a1a; transition: all 0.3s; }
         .connect-link:hover { background: #002FA7; color: white; transform: translateX(10px); }
         footer { background: #1a1a1a; color: white; text-align: center; padding: 2rem; }
+        
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero-content { grid-template-columns: 1fr; }
-            .nav-links { gap: 1rem; }
+            nav { padding: 1rem; }
+            .logo { font-size: 1.2rem; margin-bottom: 0.5rem; }
+            .nav-links { gap: 0.5rem; width: 100%; justify-content: center; }
+            .nav-links button { font-size: 0.85rem; padding: 0.25rem 0.5rem; }
+            main { margin-top: 100px; }
+            .hero { min-height: auto; padding: 2rem 0; }
+            .hero-content { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1rem; }
+            .hero h1 { font-size: 2rem; margin-bottom: 1rem; }
+            .hero-subtitle { font-size: 1.1rem; margin-bottom: 1rem; }
+            .hero-description { font-size: 1rem; margin-bottom: 1.5rem; }
+            .hero-image img { width: 100% !important; height: auto !important; max-width: 300px; margin: 0 auto; display: block; }
+            .cta-buttons { flex-direction: column; width: 100%; }
+            .btn { width: 100%; text-align: center; }
+            .section { padding: 3rem 1rem; }
+            .section-title { font-size: 1.8rem; margin-bottom: 2rem; }
+            .work-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .work-card-content { padding: 1.5rem; }
+            .work-card h3 { font-size: 1.2rem; }
+            .page-content { padding: 2rem 1rem; }
+            .page-title { font-size: 2rem; margin-bottom: 2rem; }
+            .section-subtitle { font-size: 1.5rem; margin: 2rem 0 1.5rem; }
+            .portfolio-item { padding: 1.5rem; }
+            .portfolio-item h3 { font-size: 1.2rem; }
+            .speaking-intro { padding: 2rem 1.5rem; }
+            .lead-text { font-size: 1rem; margin-bottom: 1rem; }
+            .writing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .article-card { padding: 1.5rem; }
+            .article-card h3 { font-size: 1.2rem; }
+            .social-icons { gap: 1rem; }
+            .social-icon { padding: 0.6rem 1rem; font-size: 0.9rem; }
+            .connect-link { padding: 1rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links button { font-size: 0.75rem; }
+            .hero h1 { font-size: 1.75rem; }
+            .hero-subtitle { font-size: 1rem; }
+            .hero-description { font-size: 0.95rem; }
+            .section { padding: 2rem 1rem; }
+            .section-title { font-size: 1.5rem; }
+            .work-card h3, .article-card h3, .portfolio-item h3 { font-size: 1.1rem; }
+            .lead-text { font-size: 0.95rem; }
         }
     </style>
 </head>
